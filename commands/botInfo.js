@@ -6,7 +6,7 @@ module.exports.run = async (bot, message, args) => {
             .setTitle('👑 The Royal Family of the Netherlands | BOT')
             .setColor("#6aa75e")
             .addField("Bot naam:", "TheRoyalFamilyoftheNetherlands")
-            .addField("Bot ID:", "868367264053858314")
+            .addField("Bot ID:", "868854708851318794")
             .addField("Gemaakt door:", "Tweeli.#0001")
             .addField("Gemaakt op:", "Visual Studio Code.")
             .addField("Node:", "V13.14.0")
