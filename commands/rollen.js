@@ -5,10 +5,10 @@ const discord = require("discord.js");
      var roles = message.guild.roles.cache.size - 1
 
     var rolesEmbed = new discord.MessageEmbed()
-    .setTitle('Rollen Den Haag Stad.')
-    .setDescription(`Rollen: [${roles}] ${message.guild.roles.cache.map(r => r).join(" ").replace("@everyone", "")}`)
-         
-  message.lineReply(rolesEmbed)
+      .setTitle('Rollen 👑 The Royal Family of the Netherlands.')
+      .setDescription(`Rollen: [${roles}] ${message.guild.roles.cache.map(r => r).join(" ").replace("@everyone", "")}`)
+      .setFooter('👑 The Royal Family of the Netherlands');
+    message.lineReply(rolesEmbed)
 
 }
 

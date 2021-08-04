@@ -7,11 +7,11 @@ module.exports.run = async(bot, message, args) => {
     
     if(!message.guild.me.hasPermission("BAN_MEMBERS")) return message.reply("De bot heeft hiervoor geen perms!");
     
-    if(!args[0]) return message.reply("Geen gebruiker opgegeven!");
+    if(!args[0]) return message.reply("Geen gebruiker opgegeven om te **bannen**!");
     
     var banUser = message.guild.member( message.mentions.users.first() || message.guild.members.get(args[1]));
     
-    const banChannel = message.guild.channels.cache.find(c => c.name == "「📃」user-logs")
+    const banChannel = message.guild.channels.cache.find(c => c.name == "📌》discord-logs")
     
     
     if(!args[1]) return message.reply("Geen redenen opgegeven")
@@ -23,12 +23,12 @@ module.exports.run = async(bot, message, args) => {
 
     var embedPrompt = new discord.MessageEmbed()
         .setColor("#6aa75e")
-        .setDescription(`Wil je ${banUser} bannen?`)
-        .setFooter("Created by Tweeli.#0001");
+        .setDescription(`Wil je ${banUser} **bannen**?`)
+        .setFooter("👑 The Royal Family of the Netherlands");
 
     var embed = new discord.MessageEmbed()
         .setColor("#6aa75e")
-        .setFooter(message.member.displayName)
+        .setFooter('👑 The Royal Family of the Netherlands')
         .setTimestamp()
         .setDescription(`**Gebannen: ** ${banUser} \n**Gebannen door:** ${message.author} \n**Reden: ** ${reason}`);
 

@@ -4,11 +4,11 @@ module.exports.run = async (bot, message, args) => {
 
     // !tempmute persoon tijd (h,m,s).
 
-    if (!message.member.hasPermission("KICK_MEMBERS")) return message.reply("sorry jij kan dit niet");
+    if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("sorry jij kan dit niet");
 
     if (!args[0]) return message.reply("Geen gebruiker opgegeven.");
 
-    if (!message.guild.me.hasPermission("KICK_MEMBERS")) return message.reply("Geen perms");
+    if (!message.guild.me.hasPermission("MANAGE_MESSAGES")) return message.reply("Geen perms");
 
     var mutePerson = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
 
@@ -16,14 +16,14 @@ module.exports.run = async (bot, message, args) => {
 
     if (mutePerson.hasPermission("MANAGE_MESSAGES")) return message.reply("Sorry je kunt deze gebruiker niet muten");
 
-    var muteRole = message.guild.roles.cache.get('794678890429677620');
+    var muteRole = message.guild.roles.cache.get('840961100320473098');
     if (!muteRole) return message.channel.send("De rol muted bestaat niet.");
 
-    const muteChannel = message.guild.channels.cache.find(c => c.name == "「📃」user-logs");
+    const muteChannel = message.guild.channels.cache.find(c => c.name == "📌》discord-logs");
 
      var muteEmbed = new discord.MessageEmbed()
       .setColor("#6aa75e")
-      .setFooter(message.member.displayName)
+      .setFooter('👑 The Royal Family of the Netherlands')
       .setTimestamp()
       .setDescription(`**Geunmute: ** ${mutePerson} \n**Gemute door:** ${message.author}`);
      muteChannel.send(muteEmbed);

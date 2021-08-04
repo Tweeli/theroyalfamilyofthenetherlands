@@ -3,9 +3,9 @@ const discord = require("discord.js");
 module.exports.run = async (bot, message, args) => {
 
     var botinfoEmbed = new discord.MessageEmbed()
-            .setTitle('Den Haag Bot | BOT')
+            .setTitle('👑 The Royal Family of the Netherlands | BOT')
             .setColor("#6aa75e")
-            .addField("Bot naam:", "Den Haag Bot.")
+            .addField("Bot naam:", "TheRoyalFamilyoftheNetherlands")
             .addField("Bot ID:", "868367264053858314")
             .addField("Gemaakt door:", "Tweeli.#0001")
             .addField("Gemaakt op:", "Visual Studio Code.")
@@ -15,7 +15,7 @@ module.exports.run = async (bot, message, args) => {
             .addField("Gemaakt op:", "15 Juni 2021")
             .setThumbnail('https://cdn.discordapp.com/attachments/755878713668796446/850431626608902204/image0.png')
             .setTimestamp()
-            .setFooter('Created by Tweeli.#0001');
+            .setFooter('👑 The Royal Family of the Netherlands');
 
         return message.lineReply(botinfoEmbed);
 

@@ -2,7 +2,7 @@ const discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
 
-    var categoryID = "784414133051064390";
+    var categoryID = "837065252189241354";
 
     if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.lineReply("Jij kan dit niet doen.");
 
@@ -15,7 +15,7 @@ module.exports.run = async (bot, message, args) => {
     var embedPromt = new discord.MessageEmbed()
         .setColor("#6aa75e")
         .setTitle("Gelieve te antwoorden binnen 30 seconden.")
-        .setDescription(`Wil je ${addUser} toevoegen? | Created by Tweeli.#0001`);
+        .setDescription(`Wil je ${addUser} toevoegen?`);
     
     var toevoegEmbed = new discord.MessageEmbed()
         .setTitle("Gebruiker toegevoegd.")

@@ -7,11 +7,11 @@ module.exports.run = async(bot, message, args) => {
     
     if(!message.guild.me.hasPermission("KICK_MEMBERS")) return message.reply("De bot heeft hiervoor geen perms!");
     
-    if(!args[0]) return message.reply("Geen gebruiker opgegeven!");
+    if(!args[0]) return message.reply("Geen gebruiker opgegeven om te **kicken**!");
     
     var kickUser = message.guild.member( message.mentions.users.first() || message.guild.members.get(args[1]));
     
-    const kickChannel = message.guild.channels.cache.find(c => c.name == "「📃」user-logs")
+    const kickChannel = message.guild.channels.cache.find(c => c.name == "📌》discord-logs")
     
     
     if(!args[1]) return message.reply("Geen redenen opgegeven")
@@ -24,8 +24,8 @@ module.exports.run = async(bot, message, args) => {
 
     var embedPrompt = new discord.MessageEmbed()
         .setColor("#6aa75e")
-        .setDescription(`Wil je ${kickUser} kicken?`)
-        .setFooter("Created by Tweeli.#0001");
+        .setDescription(`Wil je ${kickUser} **kicken**?`)
+        .setFooter("👑 The Royal Family of the Netherlands");
 
     var embed = new discord.MessageEmbed()
         .setColor("#6aa75e")

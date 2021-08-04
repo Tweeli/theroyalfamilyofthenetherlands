@@ -6,7 +6,7 @@ module.exports.run = async (bot, message, args) => {
 
     // !warn spelerNaam redenen hier.
 
-    if (!message.member.hasPermission("KICK_MEMBERS")) return message.reply("sorry jij kan dit niet");
+    if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("sorry jij kan dit niet");
 
     if (!args[0]) return message.reply("Geen gebruiker opgegeven.");
 
@@ -33,7 +33,7 @@ module.exports.run = async (bot, message, args) => {
     });
       var warnEmbed = new discord.MessageEmbed()
         .setColor("#ff0000")
-        .setFooter(message.member.displayName, message.author.displayAvatarURL)
+        .setFooter('👑 The Royal Family of the Netherlands')
         .setTimestamp()
         .setDescription(`**Gewarnd:** ${warnUser} (${warnUser.id})
         **Gegeven door:** ${message.author}
@@ -43,14 +43,14 @@ module.exports.run = async (bot, message, args) => {
 
     var warningEmbed = new discord.MessageEmbed()
         .setColor("#ff0000")
-        .setFooter(message.member.displayName, message.author.displayAvatarURL)
+        .setFooter('👑 The Royal Family of the Netherlands')
         .setTimestamp()
         .setDescription(`**Gewarnd:** ${warnUser} (${warnUser.id})
         **Gegeven door:** ${message.author}
         **Redenen: ** ${reason}`)
         .addField("Aantal warns", warns[warnUser.id].warns);
 
-    var warninglog = message.member.guild.channels.cache.get("688467758853521446");
+    var warninglog = message.member.guild.channels.cache.get("836707086900396052");
 
     warninglog.send(warningEmbed);
 

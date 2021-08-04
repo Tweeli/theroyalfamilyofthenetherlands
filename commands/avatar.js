@@ -9,7 +9,7 @@ module.exports.run = async(bot, message, args) => {
         .setTitle(`Profielfoto van ${member.user.tag}`)
         .setImage(member.user.displayAvatarURL({dynamic : true, size: 4096}))
         .setColor("#6aa75e")
-        .setFooter('Created by Tweeli.#0001');
+        .setFooter('👑 The Royal Family of the Netherlands');
     message.lineReply(avEmbed);
 
 }

@@ -2,7 +2,7 @@ const discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
 
-    const categoryID = "784414133051064390";
+    const categoryID = "837065252189241354";
 
     if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("> Jij kan dit niet doen");
 
@@ -19,10 +19,10 @@ module.exports.run = async (bot, message, args) => {
             .setTitle("Ticket, " + message.channel.name)
             .setDescription("Het ticket van " + message.channel.name + ` is gesloten door ${message.author} . \n \n **Reden: ** ${reden}`)
             .setColor("#6aa75e")
-            .setFooter('Created by Tweeli.#0001');
+            .setFooter('👑 The Royal Family of the Netherlands');
 
         // Channel voor logging
-        var logChannel = message.guild.channels.cache.find(channel => channel.id === "868377923638411304");
+        var logChannel = message.guild.channels.cache.find(channel => channel.id === "837059366934413343");
         if (!logChannel) return message.reply("Kanaal bestaat niet");
 
         logChannel.send(closeticketEmbed);

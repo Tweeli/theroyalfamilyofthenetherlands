@@ -3,7 +3,7 @@ const discord = require("discord.js");
 module.exports.run = async (bot, message, args) => {
 
 
-    const categoryID = "784414133051064390";
+    const categoryID = "837065252189241354";
     var userName = message.author.username;
     var userDiscriminator = message.author.discriminator;
 
@@ -47,14 +47,14 @@ module.exports.run = async (bot, message, args) => {
                         var ticketEmbed = new discord.MessageEmbed()
                             .setDescription("Het ticket van <#" + `${createdChannel.id}` + "> is geopend.")
                             .setColor("#6aa75e")
-                            .setFooter('Created by Tweeli.#0001');
+                            .setFooter('👑 The Royal Family of the Netherlands');
                         message.lineReply(ticketEmbed); 
 
                     var embedParent = new discord.MessageEmbed()
                         .setTitle(`Hoi ${message.author.username}`)
                         .setDescription("Het support team komt er zo snel mogelijk aan! \n Zeg hier alvast je vraag.")
                         .setColor('#6aa75e')
-                        .setFooter('Created by Tweeli.#0001');
+                        .setFooter('👑 The Royal Family of the Netherlands');
        
                     settedParent.send(embedParent);
 
@@ -62,8 +62,8 @@ module.exports.run = async (bot, message, args) => {
                     .setTitle("Ticket, " + createdChannel.name)
                     .setDescription("Het ticket van " + createdChannel.name + " is geopend.")
                     .setColor("#6aa75e")
-                    .setFooter('Created by Tweeli.#0001');
-                    var logChannel = message.guild.channels.cache.find(channel => channel.id === "868377923638411304")
+                    .setFooter('👑 The Royal Family of the Netherlands');
+                    var logChannel = message.guild.channels.cache.find(channel => channel.id === "837059366934413343")
                     if(!logChannel) return message.reply("Er is iets misgelopen.");
                     logChannel.send(ticketLog);
    

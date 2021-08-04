@@ -3,13 +3,13 @@ const discord = require("discord.js");
 module.exports.run = async (bot, message, args) => {
 
     if (!args[0]) return message.reply("Geen suggestie meegegeven.")
-    var suggestions = message.member.guild.channels.cache.get("752146535722254432");
+    var suggestions = message.member.guild.channels.cache.get("836649925977571369");
 
     const suggestieEmbed = new discord.MessageEmbed()
         .setTitle(`Suggestie van ${message.author.tag} !`)
         .setColor("#6aa75e")
         .setDescription("> Suggestie: " + args.join(" "))
-        .setFooter('Created by Tweeli.#0001');
+        .setFooter('👑 The Royal Family of the Netherlands');
 
     var msg = await suggestions.send(suggestieEmbed);
     

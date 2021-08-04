@@ -9,7 +9,7 @@ module.exports.run = async(bot, message, args) => {
     var komEmbed = new discord.MessageEmbed()
         .setDescription(`:coin: En het is geworden... ${result}!`)
         .setColor("#6aa75e")
-        .setFooter('Created by Tweeli.#0001');
+        .setFooter('👑 The Royal Family of the Netherlands');
     message.lineReply(komEmbed)
 }
 

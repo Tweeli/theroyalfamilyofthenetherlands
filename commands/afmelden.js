@@ -14,7 +14,7 @@ module.exports.run = async (bot, message, args) => {
      var einde = args[1]
      var reden = args.slice(2).join(" ")
 
-    var afmelden = message.member.guild.channels.cache.get("666690472692940830");
+    var afmelden = message.member.guild.channels.cache.get("836653651841646613");
 
 const afmeldEmbed = new discord.MessageEmbed()
         .setTitle(`${message.author.tag} heeft zich afgemeld.`)
@@ -22,7 +22,7 @@ const afmeldEmbed = new discord.MessageEmbed()
         .addField("Eind datum:", "> " + einde)
         .addField("Reden:", "> " + reden)
         .setColor("#6aa75e")
-        .setFooter('Created by Tweeli.#0001')
+        .setFooter('👑 The Royal Family of the Netherlands')
 var msg = await afmelden.send(afmeldEmbed);
 return message.lineReply("U bent succesvol afgemeld.")
 

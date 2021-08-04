@@ -11,7 +11,7 @@ module.exports.run = async (bot, message, args) => {
     var quoteEmbed = new discord.MessageEmbed()
      .setDescription(quotes.Quotes[num].q + "\n- " + quotes.Quotes[num].a)
      .setColor("#6aa75e")
-     .setFooter('Created by Tweeli.#0001');
+     .setFooter('👑 The Royal Family of the Netherlands');
     message.lineReply(quoteEmbed);
 
 }

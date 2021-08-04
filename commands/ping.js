@@ -5,7 +5,7 @@ module.exports.run = async (bot, message, args) => {
     var pongEmbed = new discord.MessageEmbed()
     .setDescription("Pong: " + (message.createdTimestamp - Date.now()) + " ms")
     .setColor("#6aa75e")
-    .setFooter('Created by Tweeli.#0001');
+    .setFooter('👑 The Royal Family of the Netherlands');
    message.lineReply(pongEmbed)   
 
 

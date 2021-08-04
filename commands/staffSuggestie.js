@@ -12,7 +12,7 @@ module.exports.run = async (bot, message, args) => {
         .setTitle(`Suggestie van ${message.author.tag} !`)
         .setColor("#6aa75e")
         .setDescription("> Staff suggestie: " + args.join(" "))
-        .setFooter('Created by Tweeli.#0001');
+        .setFooter('👑 The Royal Family of the Netherlands');
 
     var msg = await suggestions.send(suggestieEmbed);
     

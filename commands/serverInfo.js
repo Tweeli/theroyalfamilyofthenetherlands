@@ -21,7 +21,7 @@ module.exports.run = async(bot, message, args) => {
      .addField("Gemaakt op:", `${moment(message.guild.createdAt).format('LL')}`)
      .addField("Je bent gejoined op:", `${moment(message.member.joinedAt).format('LL')}`)
      .addField(`Rollen:`, `Deze server telt **${roles} rollen**. Voor meer info over de rollen kunt u !rollen doen.`)
-     .setFooter('Created by Tweeli.#0001');
+     .setFooter('👑 The Royal Family of the Netherlands');
 
      message.lineReply(serverinfoEmbed);
 

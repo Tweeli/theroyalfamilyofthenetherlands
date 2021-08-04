@@ -30,26 +30,16 @@ module.exports.run = async (bot, message, args) => {
     fs.writeFile("./staffWarns.json", JSON.stringify(warns), (err) => {
         if (err) console.log(err);
     });
-      var warnEmbed = new discord.MessageEmbed()
-        .setColor("#ff0000")
-        .setFooter(message.member.displayName, message.author.displayAvatarURL)
-        .setTimestamp()
-        .setDescription(`**Gewarnd:** ${warnUser} (${warnUser.id})
-        **Staff warn gegeven door:** ${message.author}
-        **Redenen: ** ${reason}`)
-        .addField("Aantal warns", warns[warnUser.id].warns)
-      warnUser.send(warnEmbed)
-
     var warningEmbed = new discord.MessageEmbed()
         .setColor("#ff0000")
-        .setFooter(message.member.displayName, message.author.displayAvatarURL)
+        .setFooter('👑 The Royal Family of the Netherlands')
         .setTimestamp()
         .setDescription(`**Gewarnd:** ${warnUser} (${warnUser.id})
         **Gegeven door:** ${message.author}
         **Redenen: ** ${reason}`)
         .addField("Aantal warns", warns[warnUser.id].warns);
 
-    var warninglog = message.member.guild.channels.cache.get("662586267183349760");
+    var warninglog = message.member.guild.channels.cache.get("844325748642021396");
 
     warninglog.send(warningEmbed);
     }

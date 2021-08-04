@@ -4,7 +4,7 @@ module.exports.run = async (bot, message, args) => {
 
       if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("Je hebt geen toestemming om dit te doen.")
 
-    var afmelden = message.member.guild.channels.cache.get("666690472692940830");
+    var afmelden = message.member.guild.channels.cache.get("836653651841646613");
 
     
 

@@ -26,7 +26,7 @@ module.exports.run = async(bot, message, args) => {
         .addField("Account gemaakt:", `${moment(member.user.createdAt).format("LL")}`)
         .addField("Server gejoined:", `${moment(member.joinedAt).format('LL')}`)
         .addField(`Rollen: [${roles}]`, `${roleNames}`)
-        .setFooter('Created by Tweeli.#0001');
+        .setFooter('👑 The Royal Family of the Netherlands');
 
     message.lineReply(userinfoEmbed);
 }

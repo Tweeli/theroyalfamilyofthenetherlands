@@ -14,7 +14,8 @@ module.exports.run = async (bot, message, args) => {
             .setTitle(`${memeTitle}`)
             .setURL(`${memeUrl}`)
             .setImage(`${memeFoto}`)
-            .setColor('#6aa75e');
+            .setColor('#6aa75e')
+            .setFooter('👑 The Royal Family of the Netherlands')
         message.lineReply(memeEmbed);
 
     }).catch("error", (err) => {

@@ -8,7 +8,7 @@ module.exports.run = async(bot, message, args) => {
      .setTitle("Embed color.")
      .setDescription("HEX: #6aa75e")
      .setColor("#6aa75e")
-     .setFooter('Created by Tweeli.#0001');
+     .setFooter('👑 The Royal Family of the Netherlands');
     message.lineReply(inviteEmbed);
 
 }
