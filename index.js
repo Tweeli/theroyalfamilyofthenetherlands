@@ -82,9 +82,9 @@ bot.on("messageDelete", messageDeleted => {
 		.setDescription(respone)
 		.setTimestamp()
 		.setColor('#6aa75e')
-		.setFooter('Created by Tweeli.#0001');
+		.setFooter('👑 The Royal Family of the Netherlands');
 
-	bot.channels.cache.get('871799202055868477').send(deletedContentEmbed);
+	bot.channels.cache.get('836707086900396052').send(deletedContentEmbed);
 
 
 });
@@ -102,8 +102,8 @@ bot.on("messageUpdate", async (oldMessage, newMessage) => {
 		.setDescription(`Bericht ${newMessage.id} is bewerkt in ${newMessage.channel}\n **Voor:** ${oldMessage.content}\n **Na:** ${newMessage.content}`)
 		.setColor('#6aa75e')
 		.setTimestamp()
-		.setFooter('Created by Tweeli.#0001')
-	bot.channels.cache.get('871799202055868477').send(newMessageEmbed);
+		.setFooter('👑 The Royal Family of the Netherlands')
+	bot.channels.cache.get('836707086900396052').send(newMessageEmbed);
 
 })
 
