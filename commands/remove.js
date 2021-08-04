@@ -75,5 +75,6 @@ async function promtMessage(message, author, time, reactions) {
 }
 
 module.exports.help = {
-    name: "remove"
+    name: "remove",
+    aliases: []
 }

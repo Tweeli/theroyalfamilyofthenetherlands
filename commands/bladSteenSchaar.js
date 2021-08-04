@@ -60,5 +60,6 @@ module.exports.run = async (bot, message, args) => {
 }
 
 module.exports.help = {
-    name: "sps"
+    name: "sps",
+    aliases: ["bladsteenschaar", "schaarsteenpapier", "papiersteenschaar", "ssp"]
 }

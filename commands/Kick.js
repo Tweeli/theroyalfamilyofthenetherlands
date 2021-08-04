@@ -11,7 +11,7 @@ module.exports.run = async(bot, message, args) => {
     
     var kickUser = message.guild.member( message.mentions.users.first() || message.guild.members.get(args[1]));
     
-    const kickChannel = message.guild.channels.cache.find(c => c.name == "「📋」bot-warns")
+    const kickChannel = message.guild.channels.cache.find(c => c.name == "「📃」user-logs")
     
     
     if(!args[1]) return message.reply("Geen redenen opgegeven")
@@ -54,5 +54,6 @@ module.exports.run = async(bot, message, args) => {
 }
 
 module.exports.help = {
-    name: "kick" 
+    name: "kick",
+    aliases: [] 
 }

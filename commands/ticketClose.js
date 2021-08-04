@@ -6,6 +6,10 @@ module.exports.run = async (bot, message, args) => {
 
     if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("> Jij kan dit niet doen");
 
+    if (!args[0]) return message.reply("Geen reden meegegeven om het ticket te closen.")
+
+    var reden = args.slice(0).join(" ")
+
     if (message.channel.parentID == categoryID) {
 
         message.channel.delete();
@@ -13,15 +17,15 @@ module.exports.run = async (bot, message, args) => {
         // Create embed.
         var closeticketEmbed = new discord.MessageEmbed()
             .setTitle("Ticket, " + message.channel.name)
-            .setDescription("Het ticket van " + message.channel.name + ` is gesloten door ${message.author} .`)
+            .setDescription("Het ticket van " + message.channel.name + ` is gesloten door ${message.author} . \n \n **Reden: ** ${reden}`)
             .setColor("#6aa75e")
             .setFooter('Created by Tweeli.#0001');
 
         // Channel voor logging
-        var ticketChannel = message.member.guild.channels.cache.find(channel => channel.name === "「📋」ticket-logs-test");
-        if (!ticketChannel) return message.reply("Kanaal bestaat niet");
+        var logChannel = message.guild.channels.cache.find(channel => channel.id === "868377923638411304");
+        if (!logChannel) return message.reply("Kanaal bestaat niet");
 
-        ticketChannel.send(closeticketEmbed);
+        logChannel.send(closeticketEmbed);
 
     } else {
 
@@ -34,5 +38,6 @@ module.exports.run = async (bot, message, args) => {
 }
 
 module.exports.help = {
-    name: "close"
+    name: "close",
+    aliases: ["delete"]
 }

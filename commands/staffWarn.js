@@ -2,7 +2,7 @@ const discord = require("discord.js");
 const fs = require("fs");
 const warns = JSON.parse(fs.readFileSync("./data/staffWarns.json", "utf8"));
 
-module.exports.run = async (client, message, args) => {
+module.exports.run = async (bot, message, args) => {
 
     // !warn spelerNaam redenen hier.
 
@@ -56,5 +56,6 @@ module.exports.run = async (client, message, args) => {
 
 
 module.exports.help = {
-    name: "staff-warn"
+    name: "staff-warn",
+    aliases: ["swarn"]
 }

@@ -16,5 +16,6 @@ module.exports.run = async(bot, message, args) => {
 module.exports.help = {
     name: "ecolor",
     description: "",
-    category: ""
+    category: "",
+    aliases: []
 }

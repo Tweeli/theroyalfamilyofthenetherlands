@@ -2,10 +2,14 @@ const discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
 
-    message.lineReply("Hoi!");
+    let antwoorden = ["Hoi.", "Hoi!", "Hallo.", "Hallo!", "Hi.", "Hi!"];
+    let resultaat = Math.floor((Math.random() * antwoorden.length));
+
+   message.lineReply(`${antwoorden[resultaat]}`)
 
 }
 
 module.exports.help = {
-    name: "hallo"
+    name: "hallo",
+    aliases: ["hoi", "Hoi!", "Hallo", "Hi", "hi!", "Hi!", "Hi.", "hi."]
 }

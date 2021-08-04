@@ -2,7 +2,7 @@ const discord = require("discord.js");
 const fs = require("fs");
 const warns = JSON.parse(fs.readFileSync("./data/warns.json", "utf8"));
 
-module.exports.run = async (client, message, args) => {
+module.exports.run = async (bot, message, args) => {
 
     // !warn spelerNaam redenen hier.
 
@@ -50,12 +50,13 @@ module.exports.run = async (client, message, args) => {
         **Redenen: ** ${reason}`)
         .addField("Aantal warns", warns[warnUser.id].warns);
 
-    var warninglog = message.member.guild.channels.cache.get("870335985676865576");
+    var warninglog = message.member.guild.channels.cache.get("688467758853521446");
 
     warninglog.send(warningEmbed);
 
 }
 
 module.exports.help = {
-    name: "warn"
+    name: "warn",
+    aliases: []
 }

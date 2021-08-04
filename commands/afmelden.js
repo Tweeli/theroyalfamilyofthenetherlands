@@ -29,5 +29,6 @@ return message.lineReply("U bent succesvol afgemeld.")
 }
 
 module.exports.help = {
-    name: "afmelden"
+    name: "afmelden",
+    aliases: []
 }

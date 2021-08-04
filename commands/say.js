@@ -12,5 +12,6 @@ var reason = args.slice(0).join(" ");
 }
 
 module.exports.help = {
-    name: "say"
+    name: "say",
+    aliases: ["zeg"]
 }

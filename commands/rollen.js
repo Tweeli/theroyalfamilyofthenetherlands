@@ -13,5 +13,6 @@ const discord = require("discord.js");
 }
 
 module.exports.help = {
-    name: "rollen"
+    name: "rollen",
+    aliases: ["roles"]
 }

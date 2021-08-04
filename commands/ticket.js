@@ -47,7 +47,7 @@ module.exports.run = async (bot, message, args) => {
                         var ticketEmbed = new discord.MessageEmbed()
                             .setDescription("Het ticket van <#" + `${createdChannel.id}` + "> is geopend.")
                             .setColor("#6aa75e")
-                            .setFooter('Created by Tweeli.#0001')
+                            .setFooter('Created by Tweeli.#0001');
                         message.lineReply(ticketEmbed); 
 
                     var embedParent = new discord.MessageEmbed()
@@ -84,5 +84,6 @@ module.exports.run = async (bot, message, args) => {
 } 
 
 module.exports.help = {
-    name: "new"
+    name: "new",
+    aliases: ["ticket"]
 }

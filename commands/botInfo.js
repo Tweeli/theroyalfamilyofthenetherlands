@@ -3,9 +3,9 @@ const discord = require("discord.js");
 module.exports.run = async (bot, message, args) => {
 
     var botinfoEmbed = new discord.MessageEmbed()
-            .setTitle('The Royal Family of the Netherlands | BOT')
+            .setTitle('Den Haag Bot | BOT')
             .setColor("#6aa75e")
-            .addField("Bot naam:", "The Royal Family of the Netherlands")
+            .addField("Bot naam:", "Den Haag Bot.")
             .addField("Bot ID:", "868367264053858314")
             .addField("Gemaakt door:", "Tweeli.#0001")
             .addField("Gemaakt op:", "Visual Studio Code.")
@@ -22,5 +22,6 @@ module.exports.run = async (bot, message, args) => {
 }
 
 module.exports.help = {
-    name: "botinfo"
+    name: "botinfo",
+    aliases: ["binfo"]
 }

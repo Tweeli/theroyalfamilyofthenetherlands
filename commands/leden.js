@@ -21,7 +21,8 @@ module.exports.run = async (bot, message, args) => {
 }
 
 module.exports.help = {
-    name: "membercount",
+    name: "leden",
     description: "Geeft weer hoeveel leden er in de server zitten.",
-    category: "Informatie"
+    category: "Informatie",
+    aliases: ["membercount", "members"]
 }
