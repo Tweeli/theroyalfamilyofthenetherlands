@@ -150,4 +150,4 @@ bot.on('message', async message => {
 
 
 bot.login(process.env.token);
-console.log(`${bot.user.username} Is online!`);
+console.log('De bot is online!');
