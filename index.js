@@ -61,6 +61,8 @@ bot.on("guildMemberAdd", member => {
 
 //Bot Status.
 bot.on('ready', async () => {
+	console.log(`${bot.user.username} Is online!`);
+
 	bot.user.setActivity('Tweeli.#0001.', { type: 'LISTENING' });
 });
 
@@ -150,4 +152,3 @@ bot.on('message', async message => {
 
 
 bot.login(process.env.token);
-console.log('De bot is online!');
