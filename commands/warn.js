@@ -51,6 +51,7 @@ module.exports.run = async (bot, message, args) => {
         .addField("Aantal warns", warns[warnUser.id].warns);
 
     var warninglog = message.member.guild.channels.cache.get("836707086900396052");
+    message.channel.send(`${warnUser} is gewarnd. Met de reden: ${reason}`);
 
     warninglog.send(warningEmbed);
 

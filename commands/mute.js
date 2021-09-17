@@ -42,6 +42,7 @@ module.exports.run = async (bot, message, args) => {
       .setTimestamp()
       .setDescription(`**Gemute: ** ${mutePerson} \n**Gemute door:** ${message.author} \n**Reden: ** ${reden} \n**Tijd: ** ${tijd}`);
     muteChannel.send(muteEmbed);
+    message.channel.send(`${mutePerson} is gemute. Reden: ${reden}. Tijd: ${muteTime}`)
 
 
     setTimeout(() => {
