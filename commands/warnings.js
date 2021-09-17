@@ -3,9 +3,7 @@ const fs = require("fs");
 const warns = JSON.parse(fs.readFileSync("./data/warns.json", "utf8"));
 
 module.exports.run = async (bot, message, args) => {
-
-    // !warn spelerNaam redenen hier.
-
+    
     if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("sorry jij kan dit niet");
 
     if (!args[0]) return message.reply("Geen gebruiker opgegeven.");
