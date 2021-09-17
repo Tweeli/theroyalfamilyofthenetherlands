@@ -32,7 +32,6 @@ module.exports.run = async (bot, message, args) => {
     var reden = args.slice(2).join(" ")
 
     await (mutePerson.roles.add(muteRole.id));
-    message.channel.send(`${mutePerson} is gemuted voor ${muteTime}`);
 
     const muteChannel = message.guild.channels.cache.find(c => c.name == "📌》discord-logs");
 
