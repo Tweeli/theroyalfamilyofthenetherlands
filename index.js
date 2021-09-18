@@ -63,7 +63,7 @@ bot.on("guildMemberAdd", member => {
 bot.on('ready', async () => {
 	console.log(`${bot.user.username} Is online!`);
 
-	bot.user.setActivity('Tweeli.#0001.', { type: 'LISTENING' });
+	bot.user.setActivity('Tristan#5000', { type: 'LISTENING' });
 });
 
 
